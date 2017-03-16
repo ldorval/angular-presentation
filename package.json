@@ -1,0 +1,14 @@
+{
+  "name": "angular-presentation",
+  "version": "1.0.0",
+  "description": "Simple example for an angular presentation",
+  "main": "app.js",
+  "repository": {},
+  "dependencies": {
+
+  },
+  "devDependencies": {
+    "angular": "1.6.0",
+    "jasmine-core": "2.5.2"
+  }
+}

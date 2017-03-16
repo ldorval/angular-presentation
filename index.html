@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Angular Presentation</title>
+    <link rel="stylesheet" href="src/app/assets/styles.css" />
+</head>
+<body data-ng-app="INTACT.Presentation">
+
+    <div data-ng-controller="AccountController as accountController">
+        <p>The account balance is: {{ accountController.balance }}$</p>
+
+        <p>
+            <div data-ng-if="accountController.error.message" class="error-message">{{ accountController.error.message }}</div>
+            <input type="text" data-ng-model="accountController.transferAmount" />
+            <button data-ng-click="accountController.deposit()">Deposit</button>
+            <button data-ng-click="accountController.withdraw()">Withdraw</button>
+        </p>
+    </div>
+
+    <script type="text/javascript" src="node_modules/angular/angular.js"></script>
+    <script type="text/javascript" src="src/app/app.js"></script>
+    <script type="text/javascript" src="src/app/controllers/controller.account.js"></script>
+    <script type="text/javascript" src="src/app/services/service.account.js"></script>
+</body>
+</html>
